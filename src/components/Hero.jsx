@@ -1,4 +1,4 @@
-import { ArrowDown } from "./ArrowDown"
+
 import { Facts } from "./Facts"
 import { HeroGrid } from "./HeroGrid"
 
@@ -27,7 +27,7 @@ export const Hero = () => {
          
       </div> 
       <div className="arrow absolute bg-red-500">
-        <ArrowDown/>
+  
       </div>
     </section>
   )
