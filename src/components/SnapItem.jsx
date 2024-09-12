@@ -12,10 +12,9 @@ export const SnapItem = ({ bgClass, logoSrc, description, title }) => {
 
 
 
-    // Animación para el título
     gsap.fromTo(
       titleRef.current,
-      { opacity: 0, x: -200 }, // Comienza fuera de la pantalla a la izquierda
+      { opacity: 0, x: -200 }, 
       {
         opacity: 1,
         x: 0,
@@ -30,10 +29,9 @@ export const SnapItem = ({ bgClass, logoSrc, description, title }) => {
       }
     );
 
-    // Animación para la descripción
     gsap.fromTo(
       descriptionRef.current,
-      { opacity: 0, x: 200 }, // Comienza fuera de la pantalla a la derecha
+      { opacity: 0, x: 200 }, 
       {
         opacity: 1,
         x: 0,

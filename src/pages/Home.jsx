@@ -27,7 +27,8 @@
         scroller: ".wrapper",
       });
   
-      // Efecto para las bullets en el lateral derecho
+  
+
       gsap.utils.toArray(".panel").forEach((panel, index) => {
         gsap.to(`.bullet-${index + 1}`, {
           background: "#fff",
@@ -41,30 +42,30 @@
       });
     });
   
-    // Añadir Parallax a las imágenes de fondo y al video
+
     useEffect(() => {
       gsap.utils.toArray(".parallax").forEach((section) => {
         gsap.to(section, {
-          backgroundPositionY: "50%", // Cambia la velocidad de desplazamiento de la imagen o video
+          backgroundPositionY: "50%", 
           ease: "none",
           scrollTrigger: {
             trigger: section,
-            start: "top bottom", // Empieza cuando el top del panel está en el bottom del viewport
-            end: "bottom top", // Termina cuando el bottom del panel está en el top del viewport
-            scrub: true, // Efecto de desplazamiento suave
+            start: "top bottom", 
+            end: "bottom top", 
+            scrub: true, 
           },
         });
       });
     }, []);
   
-    // Animación para el HorizontalNav
+
     useEffect(() => {
       ScrollTrigger.create({
-        trigger: ".hero-section", // Asegúrate de que ".snap-item" sea el selector correcto para la segunda sección
-        start: "top center", // Inicia cuando la segunda sección llega al centro de la pantalla
-        end: "bottom center", // Finaliza cuando la segunda sección sale del viewport
-        onEnter: () => gsap.to(".horizontal-nav", { opacity: 1, x: 0, duration: 1.5, ease: "power4.out" }), // Aparece
-        onLeaveBack: () => gsap.to(".horizontal-nav", { opacity: 0, x: -100, duration: 1.5, ease: "power4.out" }) // Desaparece
+        trigger: ".hero-section", 
+        start: "top center",
+        end: "bottom center", 
+        onEnter: () => gsap.to(".horizontal-nav", { opacity: 1, x: 0, duration: 1.5, ease: "power4.out" }), 
+        onLeaveBack: () => gsap.to(".horizontal-nav", { opacity: 0, x: -100, duration: 1.5, ease: "power4.out" }) 
       });
     }, []);
   
@@ -80,17 +81,17 @@
           start: "top center",
           end: "bottom center",
           onEnter: showBullets,
-          onLeave: index === parallaxSections.length - 1 ? hideBullets : null, // Oculta al salir del último panel
-          onLeaveBack: index === 0 ? hideBullets : null, // Oculta al retroceder antes del primer panel
+          onLeave: index === parallaxSections.length - 1 ? hideBullets : null, 
+          onLeaveBack: index === 0 ? hideBullets : null, 
           onEnterBack: showBullets,
         });
       });
     
-      // Ocultar bullets cuando el usuario está antes del primer parallax
+      
       ScrollTrigger.create({
-        trigger: parallaxSections[0], // La primera sección parallax
-        start: "top top", // Detecta cuando el top de la primera sección llega a la parte superior del viewport
-        onLeaveBack: hideBullets, // Oculta las bullets cuando retrocedemos antes del primer parallax
+        trigger: parallaxSections[0], 
+        start: "top top",
+        onLeaveBack: hideBullets,
       });
     }, []);
 

@@ -12,20 +12,20 @@ export const Nav = () => {
    useEffect(() => {
       gsap.registerPlugin(ScrollTrigger);
   
-      // Animación de aparición en secuencia para los elementos del grid
+      
       gsap.fromTo(
-        ".grid-item",  // Selecciona los elementos que tienen la clase grid-item
-        { opacity: 0, y: 50 },  // Comienza con opacidad 0 y desplazado hacia abajo
+        ".nav-animated",  
+        { background: "transparent" }, 
         { 
           opacity: 1, 
           y: 0, 
           duration: 1.5, 
           ease: "power4.out", 
           scrollTrigger: {
-            trigger: ".hero-grid", // El contenedor del grid activa la animación
-            start: "top 75%",      // Inicia cuando el top del grid llega al 75% del viewport
+            trigger: ".hero-section", 
+            start: "top 75%",      
           },
-          stagger: 0.3 // Retraso entre la animación de cada elemento
+          stagger: 0.3 
         }
       );
     }, []);

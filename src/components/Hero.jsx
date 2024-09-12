@@ -8,20 +8,20 @@ export const Hero = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Animación para el título "Empower your ideas"
+   
     gsap.fromTo(
       ".hero-title", 
-      { opacity: 0, y: 50 },  // Comienza transparente y ligeramente desplazado hacia abajo
+      { opacity: 0, y: 50 },  
       { 
         opacity: 1, 
         y: 0, 
         duration: 3, 
         ease: "power4.out", 
         scrollTrigger: {
-          trigger: ".hero-title",  // El elemento que activará el efecto
-          start: "top 75%",        // Inicia cuando el top del título llega al 75% del viewport
-          end: "bottom top",       // Finaliza cuando el bottom del título sale del viewport
-          scrub: true,             // Desplazamiento suave
+          trigger: ".hero-title",  
+          start: "top 75%",        
+          end: "bottom top",       
+          scrub: true,           
         }
       }
     );
@@ -36,7 +36,6 @@ export const Hero = () => {
          <div className='px-25 mt-12 h-full flex-wrap flex-col  justify-between  relative'>
 
             
-            {/* Añadir la clase "hero-title" para animación */}
             <h1 className="w-full hero-title text-[3.5rem] pt-12">
               Empower your ideas, 
               Boost your success.

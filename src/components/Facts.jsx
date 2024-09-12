@@ -16,11 +16,11 @@ export const Facts = () => {
          ([entry]) => {
             if (entry.isIntersecting) {
                setIsVisible(true);
-               observer.unobserve(factSectionRef.current); // Deja de observar una vez que ya se ha activado
+               observer.unobserve(factSectionRef.current); 
             }
          },
          {
-            threshold: 0.3, // El porcentaje del elemento visible para que se considere como "visible"
+            threshold: 0.3, 
          }
       );
 
@@ -41,7 +41,7 @@ export const Facts = () => {
             setExperience(30);
             setProjects(100);
             setBrands(50);
-         }, 100); // Cambié el tiempo a 500 ms para un inicio más rápido
+         }, 100); 
 
          return () => {
             clearTimeout(timeoutId);

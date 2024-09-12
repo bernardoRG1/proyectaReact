@@ -27,7 +27,7 @@
 .title {
   display: block;
 
-  /*  Set same font-size and line height  */
+  
   font-size: 20px;
   line-height: 20px;
 
@@ -54,7 +54,6 @@
   align-items: center;
   margin-left: 10px;
 
-  /*  Remove overflow to see how it works　:) */
   overflow: hidden;
 }
 
@@ -68,14 +67,12 @@
   transform: translate(-40px);
 }
 
-/* Hover Action*/
 
-/* Move up two texts (20px = font-size) */
 .link:hover .link-container {
   transform: translateY(-20px);
 }
 
-/* Rotate texts a little bit */
+
 .link:hover .link-title1 {
   transform: rotate(20deg);
 }
@@ -84,7 +81,7 @@
   transform: rotate(0);
 }
 
-/* Move arrows to right */
+
 .link:hover .icon:first-child {
   transform: translate(40px);
 }
