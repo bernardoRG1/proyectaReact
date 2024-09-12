@@ -4,13 +4,13 @@ import Service from "./Services"
 export const About = () => {
   return (
     <section className=' h-screen relative snap-start'>
-         <div className='shape absolute w-full h-[60vh]  left-0 right-0 '></div>
+
          <div className="h-full w-full backdrop-blur-3xl flex flex-col  justify-center p-40">
-            <h1 className="text-8xl  p-20">Services</h1>
+            <h1 className="text-6xl  mt-16 p-20">Services</h1>
             <div className="  b self-center  flex flex-col justify-center items-center w-full6  font-sans">
                <Service/>
             </div>
-            <div className="px-10 py-20">
+            <div className="px-10 py-5">
                <div className="flex items-center justify-around gap-40">
                   <h1 className="text-5xl">Brands</h1>
                   <ul className="space-y-2">

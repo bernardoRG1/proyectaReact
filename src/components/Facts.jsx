@@ -41,7 +41,7 @@ export const Facts = () => {
             setExperience(30);
             setProjects(100);
             setBrands(50);
-         }, 300); // Cambié el tiempo a 500 ms para un inicio más rápido
+         }, 100); // Cambié el tiempo a 500 ms para un inicio más rápido
 
          return () => {
             clearTimeout(timeoutId);
@@ -49,21 +49,12 @@ export const Facts = () => {
       }
    }, [isVisible]);
 
-   useGSAP(() => {
-      const timeline = gsap.timeline();
-      timeline.from(".fact-item", {
-         delay: 1,
-         x: -100,
-         stagger: .5,
-         opacity: 0
-      })
-   }, {scope:factSectionRef})
    return (
       <div ref={factSectionRef} className='fact-container'>
          <div className='fact-item'>
             <div className='count-container'>
                <Odometer value={experience} className='' />
-               <span className='indicator ml-4'>+</span>
+               <span className='indicator ml-2'>+</span>
             </div>
             <p>Years of experience</p>
          </div>
@@ -71,7 +62,7 @@ export const Facts = () => {
          <div className='fact-item'>
             <div className='count-container'>
                <Odometer value={brands} className='' />
-               <span className='indicator'>+</span>
+               <span className='indicator ml-2'>+</span>
             </div>
             <p>Satisfied brands</p>
          </div>
@@ -79,7 +70,7 @@ export const Facts = () => {
          <div className='fact-item'>
             <div className='count-container'>
                <Odometer value={projects} className='' />
-               <span className='indicator'>+</span>
+               <span className='indicator ml-2'>+</span>
             </div>
             <p>Projects</p>
          </div>

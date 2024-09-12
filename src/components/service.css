@@ -32,8 +32,10 @@ p.heading.p__color {
    background-image: linear-gradient(90deg, #f61b10, #ef0963);
 }
 
-.service__box:hover .icon {
+.service__box:hover .icon svg {
    color: #fff;
+   stroke: white;
+
 }
 
 .service__box:hover p.service__text .p__color {
@@ -45,7 +47,11 @@ p.heading.p__color {
    font-weight: 400;
    margin-bottom: 23px;
    display: inline-flex;
-   color: #f90000;
+   color: #e34242;
+}
+
+.service__box:hover .icon svg {
+   fill: white;
 }
 
 p.service__text.p__color {
