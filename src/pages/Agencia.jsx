@@ -5,13 +5,13 @@ export const Agencia = () => {
     <div className="page">
       <motion.h1 
         initial={{
-          opacity: 0,
+          y: '100%',
         }}
         animate={{
-          opacity: 1,
+          opacity: 0,
         }}
         exit={{
-          opacity: 0,
+          y: "-100%",
         }}
       
       >Agebcua</motion.h1>

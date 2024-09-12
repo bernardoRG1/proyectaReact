@@ -2,24 +2,22 @@
   import { About } from "../components/About";
   import { Contact } from "../components/Contact";
   import { Hero } from "../components/Hero";
-  import Nav from "../components/Nav";
-  import { FaBehance, FaFacebookF, FaInstagram } from "react-icons/fa";
+  import {Nav} from "../components/Nav";
   import gsap from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
   import { Video } from "../components/Video";
   import { SnapItem } from "../components/SnapItem";
   import { useEffect } from "react";
-  import SmoothScroll from "../components/SmoothScroll/SmoothScroll";
   import delmarlogo from '../assets/logos/delmar.webp'
   import buzzlogo from '../assets/logos/buzz.png'
   import sandyLogo from '../assets/logos/SANDY.png'
   import { HorizontalNav } from "../components/HorizontalNav";
-  import { HeroGrid } from "../components/HeroGrid";
-  import { Transition } from "../components/Transition";
+
 
   import { motion } from "framer-motion";
 
   export const Home = () => {
+  
     gsap.registerPlugin(ScrollTrigger);
 
     useGSAP(() => {
@@ -95,6 +93,8 @@
       });
     }, []);
 
+  
+
     return (
       <motion.div className="page"
       initial={{
@@ -107,14 +107,15 @@
         opacity: 0,
       }}
         >
-        <Nav />
+        <Nav  />
   
         <div className="horizontal-nav fixed opacity-0 h-[70vh] bg0 bottom-0 w-24 flex  flex-col justify-between items-center p-10 z-50 -translate-x-full">
           <HorizontalNav />
         </div>
-        <div className="wrapper">
+        <div className="wrapper"> 
           <Video  />
-          <Hero  />
+  
+          <Hero  className="hero-section" />
           <SnapItem 
             bgClass="bg-delMar" 
             logoSrc={delmarlogo}
@@ -134,9 +135,11 @@
             description="Yet another description here." 
             title="Sunset"
           />
+      
           <About />
-            <Contact />
-        </div>
+          <Contact />
+          </div>
+    
         
       
   

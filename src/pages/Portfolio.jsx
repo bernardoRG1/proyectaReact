@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { GridLayout } from "../components/GridLayout/GridLayout";
+import Nav from "../components/Nav";
 
 export const Portfolio = () => {
   return (
@@ -13,7 +15,12 @@ export const Portfolio = () => {
         opacity: 0,
       }}
         >
-      <h1>hpña</h1>
+        <Nav/>
+        <div className="absolute top-60 left-0 w-full">
+        
+          <GridLayout/>
+        </div>
+
     </motion.div>
   )
 }

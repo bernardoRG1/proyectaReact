@@ -142,6 +142,13 @@
   .bg-sunset {
     background-image: url('./assets/backgrounds/SUNSET.webp');
   }
+
+  /* index.css */
+
+
+.nav-transparent {
+  background-color: rgba(0, 0, 0, 0); /* Transparent color */
+}
 }
 
 .odometer.odometer-auto-theme, .odometer.odometer-theme-minimal {

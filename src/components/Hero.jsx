@@ -5,27 +5,7 @@ import { Facts } from "./Facts";
 import { HeroGrid } from "./HeroGrid";
 
 export const Hero = () => {
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
 
-   
-    gsap.fromTo(
-      ".hero-title", 
-      { opacity: 0, y: 50 },  
-      { 
-        opacity: 1, 
-        y: 0, 
-        duration: 3, 
-        ease: "power4.out", 
-        scrollTrigger: {
-          trigger: ".hero-title",  
-          start: "top 75%",        
-          end: "bottom top",       
-          scrub: true,           
-        }
-      }
-    );
-  }, []);
 
   return (
     <section className='hero-section h-screen snap-start relative overflow-hidden'>
@@ -36,12 +16,12 @@ export const Hero = () => {
          <div className='px-25 mt-12 h-full flex-wrap flex-col  justify-between  relative'>
 
             
-            <h1 className="w-full hero-title text-[3.5rem] pt-12">
+            <h1 className=" w-full title text-[3.5rem] pt-12">
               Empower your ideas, 
               Boost your success.
             </h1>
             
-            <p className="   mt-4 text-xl text-red-500">
+            <p className=" hero-paragraph  mt-4 text-xl text-red-500">
               Somos un equipo estratega y comercial, aliados de tu marca.
             </p>
             
