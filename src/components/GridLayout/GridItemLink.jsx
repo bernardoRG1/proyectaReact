@@ -6,7 +6,7 @@ export const GridItemLink = ({ href, bgImage, title, className }) => {
       <a
         href={href}
         className={className}
-        style={{ backgroundImage: `url(${bgImage})` }}
+        style={{ backgroundImage: `url(${bgImage})`, backgroundSize: "cover", backgroundPosition: "center" }}
       >
         <motion.div
           className=" inset-0 flex items-center justify-center transition-opacity duration-300"
